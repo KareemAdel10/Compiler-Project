@@ -15,8 +15,9 @@ def scan_tokens(input_code):
         ("Keyword", keyword_pattern),
         ("SpecialCharacter", special_character_pattern),
         ("Operator", operator_pattern),
-        ("NumericConstant", numeric_literal_pattern),
+        ("NumericLiteral", numeric_literal_pattern),
         ("Identifier", identifier_pattern),
+        ("Space", re.compile(r"\s+")),
     ]
 
     while input_code:
@@ -35,7 +36,7 @@ def scan_tokens(input_code):
     return tokens
 
 # Example input code
-input_code = "for (i = 1; i = -5.1e3; i = i + 1) fun1 (a)"
+input_code = " while ( 1.3e-2 if )"
 
 # Call the scanner function
 found_tokens = scan_tokens(input_code)
@@ -43,5 +44,3 @@ found_tokens = scan_tokens(input_code)
 # Print the found tokens
 for token_type, token_value in found_tokens:
     print(f"{token_type}: {token_value}")
-
-
