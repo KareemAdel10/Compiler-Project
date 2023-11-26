@@ -1,5 +1,3 @@
-
-
 def is_keyword(word):
     keywords = ["auto", "break", "case", "char", "const", "continue", "default",
                 "do", "double", "else", "enum", "extern", "float", "for", "goto",
