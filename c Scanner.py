@@ -72,8 +72,5 @@ for token_type, token_value in found_tokens:
     print(f"{token_type}: {token_value}")
 
 
-# In[ ]:
-
-
 
 
